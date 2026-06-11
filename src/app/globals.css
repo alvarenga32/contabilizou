@@ -1,0 +1,136 @@
+/* Design Tokens & Variáveis HSL */
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  
+  /* Paleta Contabilizou (Inspirada no Azul/Ciano Contabilizei) */
+  --brand-dark: #002259;       /* HSL(218, 100%, 17%) - Azul Corporativo Profundo */
+  --brand-blue: #1f6ff0;       /* HSL(217, 88%, 53%) - Azul de Ação/Destaque */
+  --brand-blue-hover: #1459c7;
+  --brand-cyan: #04f7f7;       /* HSL(180, 97%, 49%) - Ciano/Verde Digital */
+  --brand-green: #04c377;      /* HSL(156, 96%, 39%) - Verde Sucesso */
+  --brand-red: #ff5233;        /* HSL(9, 100%, 60%) - Vermelho Atenção */
+
+  /* Tons Neutros de Cinza/Azul */
+  --neutral-100: #f7f9fc;      /* Fundo super leve */
+  --neutral-200: #e5f0ff;      /* Fundo azul macio */
+  --neutral-300: #d6e3f2;      /* Bordas leves */
+  --neutral-500: #6e839b;      /* Texto secundário/mutado */
+  --neutral-700: #3f4658;      /* Texto de apoio */
+  --neutral-900: #1d1d1d;      /* Texto principal / Títulos escuros */
+  
+  /* Sombras (Box Shadows) */
+  --shadow-sm: 0 2px 4px rgba(0, 34, 89, 0.04);
+  --shadow-md: 0 8px 16px rgba(0, 34, 89, 0.06);
+  --shadow-lg: 0 16px 32px rgba(0, 34, 89, 0.1);
+  --shadow-hover: 0 24px 48px rgba(0, 34, 89, 0.15);
+
+  /* Bordas */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 9999px;
+
+  /* Transições */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset Básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--color-white);
+  color: var(--neutral-900);
+  font-family: var(--font-geist-sans), 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar Customizado Premium */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--neutral-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--neutral-300);
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--neutral-100);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neutral-500);
+}
+
+/* Utilitários Globais */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  outline: none;
+}
+
+/* Animações e Efeitos */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulseSlow {
+  0%, 100% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.2;
+    transform: scale(1.05);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn var(--transition-normal) forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp var(--transition-normal) forwards;
+}
