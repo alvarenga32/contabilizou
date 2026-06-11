@@ -240,6 +240,7 @@ export default function Home() {
         )}
       </header>
 
+      <main>
       {/* --- HERO SECTION --- */}
       <section className={styles.heroSection}>
         <div className={styles.heroContainer}>
@@ -277,11 +278,12 @@ export default function Home() {
           
           <div className={styles.heroImageContainer}>
             <div className={styles.heroGlow}></div>
-            <Image 
-              src="/hero_accountant.png" 
-              alt="Contador profissional sorrindo" 
-              width={520} 
-              height={450} 
+            <Image
+              src="/hero_accountant.png"
+              alt="Contador profissional sorrindo"
+              width={520}
+              height={450}
+              sizes="(max-width: 768px) 100vw, 520px"
               className={styles.heroImage}
               priority
             />
@@ -734,16 +736,18 @@ export default function Home() {
           </div>
           
           <div className={styles.ctaImageContainer}>
-            <Image 
-              src="/team_accountants.png" 
-              alt="Time de contadores da Contabilizou" 
-              width={520} 
-              height={380} 
+            <Image
+              src="/team_accountants.png"
+              alt="Time de contadores da Contabilizou"
+              width={520}
+              height={380}
+              sizes="(max-width: 768px) 100vw, 520px"
               className={styles.ctaImage}
             />
           </div>
         </div>
       </section>
+      </main>
 
       {/* --- FOOTER --- */}
       <footer className={styles.footer}>
@@ -764,7 +768,7 @@ export default function Home() {
           </div>
 
           <div>
-            <h4 className={styles.footerColumnTitle}>Serviços</h4>
+            <h3 className={styles.footerColumnTitle}>Serviços</h3>
             <ul className={styles.footerLinks}>
               <li><a href="#" className={styles.footerLink}>Abertura de Empresa</a></li>
               <li><a href="#" className={styles.footerLink}>Migração de Contador</a></li>
@@ -775,7 +779,7 @@ export default function Home() {
           </div>
 
           <div>
-            <h4 className={styles.footerColumnTitle}>Calculadoras</h4>
+            <h3 className={styles.footerColumnTitle}>Calculadoras</h3>
             <ul className={styles.footerLinks}>
               <li><a href="#" className={styles.footerLink}>Custo de Abertura</a></li>
               <li><a href="#" className={styles.footerLink}>CLT x PJ</a></li>
@@ -785,7 +789,7 @@ export default function Home() {
           </div>
 
           <div>
-            <h4 className={styles.footerColumnTitle}>Empresa</h4>
+            <h3 className={styles.footerColumnTitle}>Empresa</h3>
             <ul className={styles.footerLinks}>
               <li><a href="#" className={styles.footerLink}>Quem Somos</a></li>
               <li><a href="#" className={styles.footerLink}>Blog Contabilizou</a></li>
@@ -795,7 +799,7 @@ export default function Home() {
           </div>
 
           <div>
-            <h4 className={styles.footerColumnTitle}>Fale Conosco</h4>
+            <h3 className={styles.footerColumnTitle}>Fale Conosco</h3>
             <ul className={styles.footerLinks}>
               <li><span className={styles.footerLink}>0800 591 2345</span></li>
               <li><span className={styles.footerLink}>WhatsApp Comercial</span></li>
